@@ -2,7 +2,7 @@
 
 ## 📌 Overview
 
-This project predicts whether a customer will churn using machine learning classification models. It helps businesses identify high-risk customers and take preventive actions.
+This project predicts whether a telecom customer will churn using machine learning. It includes full preprocessing, handling class imbalance, model training, and a Streamlit web app for real-time predictions.
 
 ---
 
@@ -16,14 +16,14 @@ This project predicts whether a customer will churn using machine learning class
 
 ## 🚀 Features
 
-* Data preprocessing (missing values, duplicates)
-* Exploratory Data Analysis (EDA)
-* Encoding categorical features
-* Handling imbalanced data using SMOTE
-* Feature scaling using StandardScaler
-* Model training (Logistic Regression, KNN, Random Forest)
-* Model evaluation using classification metrics
-* Interactive web app using Streamlit
+* Data cleaning (missing values, duplicates)
+* Proper type handling (e.g., TotalCharges conversion)
+* Encoding of categorical variables
+* Handling class imbalance using SMOTE
+* Feature scaling with StandardScaler
+* Multiple models trained (Logistic Regression, KNN, Random Forest)
+* Evaluation with classification metrics
+* Deployment using Streamlit
 
 ---
 
@@ -40,15 +40,19 @@ This project predicts whether a customer will churn using machine learning class
 
 ## 🏆 Best Model
 
-Logistic Regression was selected because it achieved the highest F1-score and ROC-AUC, and higher recall, which is critical for identifying churn customers.
+Logistic Regression selected based on:
+
+* Highest F1-score
+* Highest ROC-AUC
+* Higher recall (important for detecting churn)
 
 ---
 
 ## 🧠 Business Insight
 
-* High monthly charges → Higher churn
-* Short tenure → Higher churn
-* Lack of support → Higher churn
+* High monthly charges → higher churn
+* Short tenure → higher churn
+* Lack of tech support → higher churn
 
 ---
 
@@ -69,13 +73,15 @@ Deployed using Streamlit Cloud
 
 * app.py → Streamlit web app
 * churn_model.pkl → trained model
-* scaler.pkl → preprocessing
+* scaler.pkl → feature scaling
+* encoders.pkl → label encoders
+* features.pkl → feature order
 * requirements.txt → dependencies
 
 ---
 
 ## 🎯 Future Improvements
 
-* Add full feature-based UI
-* Improve model with XGBoost
-* Add customer segmentation
+* Try advanced models (XGBoost)
+* Add feature importance visualization
+* Improve UI/UX
